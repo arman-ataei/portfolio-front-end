@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>JS Documentation</header>
+        <ul>
+            <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+            <li><a class="nav-link" href="#JS_Variables">JS Variables</a></li>
+            <li><a class="nav-link" href="#JS_Data_types">JS Data types</a></li>
+            <li><a class="nav-link" href="#JS_Loops">JS Loops</a></li>
+            <li><a class="nav-link" href="#JS_Functions">JS Functions</a></li>
+            <li><a class="nav-link" href="#JS_Objects">JS Objects</a></li>
+            <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+        <article>
+            <p>
+                JavaScript is a cross-platform, object-oriented scripting language.
+                It is a small and lightweight language. Inside a host environment
+                (for example, a web browser), JavaScript can be connected to the
+                objects of its environment to provide programmatic control over
+                them.
+            </p>
+            <p>
+                JavaScript contains a standard library of objects, such as Array,
+                Date, and Math, and a core set of language elements such as
+                operators, control structures, and statements. Core JavaScript can
+                be extended for a variety of purposes by supplementing it with
+                additional objects; for example:
+              </p>
+              <ul>
+                <li>
+                  Client-side JavaScript extends the core language by supplying
+                  objects to control a browser and its Document Object Model (DOM).
+                  For example, client-side extensions allow an application to place
+                  elements on an HTML form and respond to user events such as mouse
+                  clicks, form input, and page navigation.
+                </li>
+                <li>
+                  Server-side JavaScript extends the core language by supplying
+                  objects relevant to running JavaScript on a server. For example,
+                  server-side extensions allow an application to communicate with a
+                  database, provide continuity of information from one invocation to
+                  another of the application, or perform file manipulations on a
+                  server.
+                </li>
+              </ul>
+        </article>
+        </section>
+        <section class="main-section" id="JS_Variables">
+            <header>JS Variables</header>
+        <article>
+            <h3>What is a variable?</h3>
+            <p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence.</p>
+            <h4>Variable example</h4>
+            <code>
+                <header class="code-header">HTML</header>
+            <div class="code-body">
+                &lt;<span class="tag-color">button</span> <span class="atr-color">id</span>="<span class="cls-Color">button_A</span>"&gt;Press me&lt;/<span class="tag-color">button</span>&gt;
+                <br>
+                &lt;<span class="tag-color">h3</span> <span class="atr-color">id</span>="<span class="cls-Color">heading_A</span>"&gt;&lt;<span class="tag-color">/h3</span>&gt;
+            </div>
+            </code>
+            <br><br>
+            <code>
+                <header class="code-header">JS</header>
+                <div class="code-body">
+              <span class="js-keywords-color">const</span> <span class="js-var-color">buttonA</span> = document.<span class="js-methodes-color">querySelector</span>(<span class="cls-Color">'#button_A'</span>);
+                <br>
+                <span class="js-keywords-color">const</span> <span class="js-var-color">headingA</span> = document.<span class="js-methodes-color">querySelector</span>(<span class="cls-Color">'#heading_A'</span>);
+                <br><br>
+                <span class="js-var-color">buttonA</span>.<span class="js-methodes-color">onclick</span> = <span class="js-func-arrow">()</span> => <span class="js-func-arrow">{</span>
+                <br>
+                <span class="js-keywords-color">const</span> <span class="js-var-color">name</span> = <span class="js-methodes-color">prompt</span>(<span class="js-string-color">'What is your name?'</span>);
+                <br>
+                <span class="js-methodes-color">alert</span>(<span class="js-string-color">`Hello</span> <span class="js-var-color">${name}</span><span class="js-string-color">, nice to see you!`</span>);
+                <br>
+                <span class="js-var-color">headingA</span>.<span class="js-methodes-color">textContent</span> = <span class="js-string-color">`Welcome</span> <span class="js-var-color">${name}</span><span class="js-string-color">`</span>;
+                <br>
+                <span class="js-func-arrow">}</span>
+        </div>
+            </code>
+            <p>In this example pressing the button runs some code. The first line pops a box up on the screen that asks the reader to enter their name, and then stores the value in a variable. The second line displays a welcome message that includes their name, taken from the variable value and the third line displays that name on the page.</p>
+
+        </article>
+        </section>
+        <section class="main-section" id="JS_Data_types">
+            <header>JS Data types</header>
+        <article>
+            <p>The set of types in the JavaScript language consists of primitive values and objects.</p>
+            <ul>
+                <li>Primitive values
+                    <ul>
+                        <li>Boolean type</li>
+                        <li>Null type</li>
+                        <li>Undefined type</li>
+                        <li>Number type</li>
+                        <li>BigInt type</li>
+                        <li>String type</li>
+                        <li>Symbol type</li>
+                    </ul>
+                </li>
+                <li>Objects</li>
+            </ul>
+
+        </article>
+        </section>
+        <section class="main-section" id="JS_Loops">
+            <header>JS Loops</header>
+        <article>
+            <p>You can think of a loop as a computerized version of the game where you tell someone to take X steps in one direction, then Y steps in another. For example, the idea "Go five steps to the east" could be expressed this way as a loop: </p>
+            <code>
+                <header class="code-header">JS</header>
+                <div class="code-body">
+                    <span class="js-keywords-color">for</span> (<span class="js-keywords-color">let</span> <span class="js-var-color">step</span> = 0; <span class="js-var-color">step</span> < 5; <span class="js-var-color">step++</span>) {
+                        <br>
+                       <span class="js-comment-color"> // Runs 5 times, with values of step 0 through 4.</span>
+                       <br>
+                        console.<span class="js-methodes-color">log</span>('Walking east one step');
+                        <br>
+                      }
+                      
+                </div>
+            </code>
+
+        </article>
+        </section>
+        <section class="main-section" id="JS_Functions">
+            <header>JS Functions</header>
+        <article>
+            <p>
+                Functions are one of the fundamental building blocks in
+                 JavaScript. A function in JavaScript is similar to a 
+                 procedure—a set of statements that performs a task or
+                  calculates a value, but for a procedure to qualify as
+                   a function, it should take some input and return an 
+                   output where there is some obvious relationship 
+                   between the input and the output. To use a function, 
+                   you must define it somewhere in the scope from which
+                    you wish to call it.
+            </p>
+            <h3>Defining Functions</h3>
+            <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+            <ul>
+                <li>The name of the function.</li>
+                <li>A list of parameters to the function, enclosed in parentheses and separated by commas.</li>
+                <li>The JavaScript statements that define the function, enclosed in curly brackets, { /* … */ }.</li>
+            </ul>
+            <code>
+                <header class="code-header">JS</header>
+                <div class="code-body">
+                    <span class="js-keywords-color">function</span> <span class="js-var-color">square</span>(<span class="js-func-atr-color">number</span>) { 
+                        <br>
+                        <span class="js-keywords-color">return</span> <span class="js-var-color">number</span> * <span class="js-var-color">number</span>; 
+                        <br>
+                      }
+                      <br>
+                      
+                      
+                </div>
+            </code>
+        </article>
+        </section>
+        <section class="main-section" id="JS_Objects">
+            <header>JS Objects</header>
+        <article>
+            <p>An object is a collection of related data and/or functionality. These usually consist of several variables and functions (which are called properties and methods when they are inside objects). Let's work through an example to understand what they look like. </p>
+            <code>
+                <header class="code-header">JS</header>
+                <div class="code-body">
+                    <span class="js-keywords-color">const</span> <span class="js-var-color">person1</span> = {
+                        <br>
+                        <span class="js-obj-atr-color">name</span>: <span class="js-string-color">'Chris'</span>,
+                        <br>
+                        <span class="js-obj-method-color">introduceSelf()</span> {
+                            <br>
+                          console.<span class="js-method-color">log(</span><span class="js-string-color">`Hi! I'm</span> <span class="js-var-color">${this.name}</span><span class="js-string-color">.`</span>);
+                          <br>
+                       <span class="indent">}</span>
+                       <br>
+                      }  
+                </div>
+            </code>   
+        </article>
+        </section>
+        <section class="main-section" id="Reference">
+            <header>Reference</header>
+        <article>
+            <ul>
+                <li>
+                  <p>All the documentation in this page is taken from
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+                    target="_blank"
+                    >MDN</a>
+                </p>
+                </li>
+              </ul>
+        </article>
+        </section>
+    </main>
+    <div class="back-to-top"><a href="#navbar" title="back to top">&#65085;</a></div>
+</body>
+</html>

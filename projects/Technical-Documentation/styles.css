@@ -1,0 +1,224 @@
+:root {
+  --h1-font-size: 26pt;
+
+  --tag-color: purple;
+  --atr-color: yellow;
+  --cls-color: green;
+
+  --js-keywords-color: #80461b;
+  --js-var-color: #ea102f;
+  --js-methodes-color: #9bcd2f;
+  --js-string-color: #fcdd1b;
+  --js-func-arrow: teal;
+  --js-comment-color: green;
+  --js-obj-atr-color: #dc10ea;
+  --js-obj-method-color: #e37d6e;
+
+  --code-background-color: #151515;
+  --code-color: whitesmoke;
+}
+
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+}
+p {
+  text-align: justify;
+  line-height: 2;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+    left: 0;
+    float: left;
+    min-width: 290px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: rgba(0, 22, 22, 0.4);
+}
+
+#main-doc {
+    
+  /* position: absolute; */
+  margin-left: 350px;
+  /* float: left; */
+  margin-right: 10px;
+  padding: 30px;
+  margin-bottom: 100px;
+}
+#navbar header{
+    text-align: center;
+    font-size: 20pt;
+    color: #2f2e2e;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 5px;
+}
+#navbar ul{
+    height: 90%;
+    padding: 0;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    margin-top: 0;
+}
+#navbar li {
+    color: #4d4e53;
+    border-top: 1px solid;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+#navbar a {
+    display: block;
+    padding: 10px 30px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #navbar a:hover{
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+section header:nth-of-type(1) {
+  font-size: var(--h1-font-size);
+  color: black;
+  text-decoration: underline;
+}
+
+code header.code-header {
+  font-size: initial;
+  color: unset;
+  text-decoration: initial;
+}
+code {
+    display: block;
+    text-align: left;
+    white-space: pre-line;
+    position: relative;
+    word-break: normal;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    word-wrap: normal;
+    line-height: 0.8;
+    background-color: var(--code-background-color);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    color: whitesmoke;
+    margin: 0 auto;
+  }
+  code .code-body{
+    min-width: 400px;
+    padding: 15px 10px;
+  }
+.tag-color{
+    color: var(--tag-color);
+}
+.atr-color{
+    color: var(--atr-color);
+}
+
+.cls-Color{
+    color: var(--cls-color);
+}
+
+.js-keywords-color{
+    color: var(--js-keywords-color);
+}
+
+.js-var-color{
+    color: var(--js-var-color);
+}
+
+.js-methodes-color{
+    color: var(--js-methodes-color);
+}
+
+.js-string-color{
+    color: var(--js-string-color);
+}
+.js-func-arrow{
+    color: var(--js-func-arrow);
+}
+.js-comment-color{
+    color: var(--js-comment-color);
+}
+.js-obj-atr-color{
+    color: var(--js-obj-atr-color);
+}
+.js-obj-method-color{
+    color: var(--js-obj-method-color);
+}
+
+.indent{
+    margin-left: 10pt;
+}
+.back-to-top{
+    display: none;
+}
+@media only screen and (max-width: 815px) {
+    /* For mobile phones: */
+    #navbar ul {
+      /* border: 1px solid; */
+      border-top: 2px solid;
+      height: 60vh;
+      text-align: center;
+    }
+  
+    #navbar {
+      background-color: white;
+      position: absolute;
+      top: 0;
+      padding: 1vh 0;
+      margin: 0;
+      width: 100%;
+      max-height: 90vh;
+      border: none;
+      z-index: 1;
+      border-bottom: 2px solid;
+    }
+  
+    #main-doc {
+      position: relative;
+      margin-left: 0px;
+      margin-top: 95vh;
+    }
+    .back-to-top{
+        position: fixed;
+        display: block;
+        top: 70vh;
+        right: 10vw;
+        
+    }
+    .back-to-top a{
+        text-decoration: none;
+        font-size: 50pt;
+        opacity: 70%;
+    }
+    .back-to-top a:hover{
+        font-weight: bold;
+        opacity: 80%;
+    }
+  }
+
+  
+@media only screen and (max-width: 400px) {
+    #main-doc {
+      margin-left: -10px;
+    }
+  
+    code {
+      margin-left: -20px;
+      width: 100%;
+      padding: 15px;
+      padding-left: 10px;
+      padding-right: 45px;
+      min-width: 233px;
+    }
+  }
